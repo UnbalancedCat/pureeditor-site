@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PureEditor 隐私政策</title>
+    <meta name="description" content="PureEditor 隐私政策 - 我们承诺保护您的本地数据安全">
+    <style>
+        :root {
+            /* 华为风格配色 */
+            --primary-color: #007DFF;
+            --text-primary: #191919;
+            --text-secondary: #666666;
+            --text-tertiary: #999999;
+            --bg-color: #ffffff;
+            --card-bg: #F2F3F5;
+            --divider-color: #E5E5E5;
+            --code-bg: #F0F0F0;
+            --toc-hover: #F2F2F2;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --primary-color: #0A59F7;
+                --text-primary: #E5E5E5;
+                --text-secondary: #AAAAAA;
+                --text-tertiary: #666666;
+                --bg-color: #000000;
+                --card-bg: #1C1C1E;
+                --divider-color: #333333;
+                --code-bg: #2C2C2E;
+                --toc-hover: #1A1A1A;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            font-family: "HarmonyOS Sans", "PingFang SC", "Microsoft YaHei", sans-serif;
+            line-height: 1.75;
+            color: var(--text-primary);
+            background-color: var(--bg-color);
+            padding: 24px 20px 60px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* 顶部标题区 */
+        header {
+            margin-bottom: 32px;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+
+        .meta-info {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+        }
+
+        /* 摘要卡片 */
+        .summary-box {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 32px;
+        }
+
+        .summary-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .summary-title::before {
+            content: '';
+            display: inline-block;
+            width: 4px;
+            height: 16px;
+            background-color: var(--primary-color);
+            margin-right: 8px;
+            border-radius: 2px;
+        }
+
+        .summary-content {
+            font-size: 14px;
+            color: var(--text-secondary);
+            text-align: justify;
+        }
+
+        /* 目录导航 (模拟华为侧边或顶部索引风格) */
+        .toc {
+            border-top: 1px solid var(--divider-color);
+            border-bottom: 1px solid var(--divider-color);
+            padding: 16px 0;
+            margin-bottom: 32px;
+        }
+        
+        .toc-title {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .toc-list {
+            list-style: none;
+        }
+
+        .toc-list li {
+            margin-bottom: 8px;
+        }
+
+        .toc-list a {
+            font-size: 14px;
+            color: var(--primary-color);
+            text-decoration: none;
+            display: block;
+            padding: 4px 0;
+        }
+        
+        .toc-list a:hover {
+            text-decoration: underline;
+        }
+
+        /* 正文内容 */
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+            position: relative;
+        }
+
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-top: 24px;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+
+        p {
+            font-size: 15px;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-bottom: 16px;
+        }
+
+        li {
+            font-size: 15px;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+        
+        strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        /* 权限列表表格样式 */
+        .permission-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            font-size: 14px;
+        }
+
+        .permission-table th {
+            text-align: left;
+            background-color: var(--card-bg);
+            padding: 12px;
+            color: var(--text-primary);
+            font-weight: 600;
+            border-bottom: 1px solid var(--divider-color);
+        }
+
+        .permission-table td {
+            padding: 12px;
+            border-bottom: 1px solid var(--divider-color);
+            color: var(--text-secondary);
+            vertical-align: top;
+        }
+
+        /* 联系方式按钮 */
+        .contact-section {
+            text-align: center;
+            margin-top: 0px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--divider-color);
+        }
+
+        .email-link {
+            display: inline-block;
+            color: var(--primary-color);
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 12px 24px;
+            border-radius: 24px;
+            background-color: var(--card-bg);
+            margin-top: 10px;
+        }
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 12px;
+            color: var(--text-tertiary);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 style="text-align: center;">关于 PureEditor 与隐私的声明</h1>
+        <div class="meta-info" style="text-align: center;">
+            更新日期：2025年12月22日 &nbsp;|&nbsp; 生效日期：2025年12月23日
+        </div>
+        
+        <div class="summary-box">
+            <div class="summary-title">摘要</div>
+            <div class="summary-content">
+                欢迎您使用由 <strong>包焕垲（UnbalancedCat）</strong> 开发的 <strong>PureEditor</strong>（以下简称“我们”或“本应用”）。PureEditor 是一款专注于提供极简、纯粹体验的本地文本编辑工具。<strong>我们承诺：本应用为纯本地应用（Local-First），不部署任何服务器，您的所有文档数据均仅存储于您自己的设备中，我们不会也无法上传或通过网络收集您的任何个人信息。</strong>
+            </div>
+        </div>
+    </header>
+
+    <div class="toc">
+        <div class="toc-title">本政策将帮助您了解以下内容：</div>
+        <ul class="toc-list">
+            <li><a href="#section-1">1. 我们如何收集和使用您的个人信息</a></li>
+            <li><a href="#section-2">2. 我们如何存储您的个人信息</a></li>
+            <li><a href="#section-3">3. 我们如何保护您的个人信息</a></li>
+            <li><a href="#section-4">4. 您的权利与信息管理</a></li>
+            <li><a href="#section-5">5. 未成年人保护</a></li>
+            <li><a href="#section-6">6. 系统基础服务说明</a></li>
+            <li><a href="#section-7">7. 本政策的更新</a></li>
+            <li><a href="#section-8">8. 如何联系我们</a></li>
+        </ul>
+    </div>
+
+    <section id="section-1">
+        <h2>1. 我们如何收集和使用您的个人信息</h2>
+        <p>我们坚持最小化数据处理原则。作为一款离线工具，我们仅在您的设备本地处理必要的数据以提供功能。具体情况如下：</p>
+
+        <h3>1.1 核心业务功能</h3>
+        <p><strong>(1) 文件编辑与管理</strong></p>
+        <p>为了实现读取、编辑、保存、重命名、删除文件等核心功能，我们需要访问您的设备存储空间。我们仅会在您主动操作（如点击“打开文件”、“保存”）时，通过系统文件选择器或应用沙箱机制处理文件。</p>
+        <ul>
+            <li><strong>涉及信息：</strong> 您选择的文本文件、代码文件、图片等文档内容。</li>
+            <li><strong>使用方式：</strong> 数据仅在内存中即时处理并在您的设备本地存储中读写。<strong>我们不会上传、不会备份、也不会分析您的文件内容。</strong></li>
+        </ul>
+
+        <p><strong>(2) 剪贴板功能</strong></p>
+        <p>为了辅助您进行文本编辑，我们需要使用系统剪贴板功能。</p>
+        <ul>
+            <li><strong>使用场景：</strong> 仅当您主动在预览界面点击“复制链接”或在编辑器中选中文字进行复制/粘贴操作时。</li>
+            <li><strong>承诺：</strong> 我们<strong>不会后台监听</strong>您的剪贴板内容，也不会读取您在其他应用中复制的无关信息。我们仅响应您的主动写入或粘贴指令。</li>
+        </ul>
+
+        <h3>1.2 附加业务功能</h3>
+        <p><strong>(1) 智感握姿与界面适配</strong></p>
+        <p>为了提供更便捷的单手操作体验（如自动判断左右手以调整侧边栏位置），以及适配华为 HDS (HarmonyOS Design System) 光效，我们使用了 HarmonyOS 的传感器能力。</p>
+        <ul>
+            <li><strong>涉及权限：</strong> 传感器信息 (MultimodalAwarenessKit / Motion)。</li>
+            <li><strong>涉及信息：</strong> 设备的握持状态（左手握持、右手握持或双手握持）、设备类型、系统版本。</li>
+            <li><strong>使用方式：</strong> 该数据由系统 API 实时返回，仅用于即时调整 UI 布局（如侧边栏位置）。<strong>该数据不会被保存，也不会被上传。</strong></li>
+        </ul>
+
+        <p><strong>(2) 网页预览渲染</strong></p>
+        <p>当您使用 Markdown 或 HTML 预览功能时，我们会使用系统提供的 WebView 组件在本地渲染您的文档内容。此过程完全在本地运行，不涉及服务端转码。</p>
+
+        <h3>1.3 申请的系统权限说明</h3>
+        <table class="permission-table">
+            <thead>
+                <tr>
+                    <th style="width: 30%">权限名称</th>
+                    <th>使用目的与场景</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>存储权限</td>
+                    <td>用于读取、修改、保存您指定的文档文件。</td>
+                </tr>
+                <tr>
+                    <td>剪贴板</td>
+                    <td>响应您的主动操作（复制/粘贴文本或链接）。</td>
+                </tr>
+                <tr>
+                    <td>传感器</td>
+                    <td>用于“智感握姿”功能，识别左右手习惯以自动调整界面布局。</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="section-2">
+        <h2>2. 我们如何存储您的个人信息</h2>
+        
+        <h3>2.1 存储地点</h3>
+        <p>我们承诺：本应用产生或处理的所有数据（包括您的文档、应用偏好设置、浏览记录等）<strong>均存储于您的移动终端设备本地</strong>。</p>
+        <p>我们未在任何国家或地区部署用于存储用户数据的服务器，因此不存在数据跨境传输的情况。</p>
+
+        <h3>2.2 存储期限</h3>
+        <ul>
+            <li><strong>文档数据：</strong> 存储期限完全由您自行决定。当您在应用内或系统文件管理器中删除文件后，数据将被永久移除。</li>
+            <li><strong>应用配置：</strong> 存储于本地首选项中，当您卸载应用或“清除应用数据”时，这些配置将被立即删除。</li>
+        </ul>
+    </section>
+
+    <section id="section-3">
+        <h2>3. 我们如何保护您的个人信息</h2>
+        <p>虽然我们不收集您的信息上传至云端，但我们仍采取多重安全措施保护您本地数据的安全：</p>
+        <ul>
+            <li><strong>本地沙箱机制：</strong> 本应用遵循 HarmonyOS 的应用沙箱机制，您的数据与其他应用隔离，防止被恶意应用非法读取。</li>
+            <li><strong>无网络权限：</strong> 在技术架构上，我们最大限度减少了网络权限的使用，从根本上切断了数据通过本应用泄露至互联网的可能性。</li>
+            <li><strong>最小化权限申请：</strong> 我们仅申请实现功能所必需的权限，并仅在您使用相关功能时请求授权。</li>
+        </ul>
+    </section>
+
+    <section id="section-4">
+        <h2>4. 您的权利与信息管理</h2>
+        <p>您对您的个人信息拥有完全的控制权，您可以便捷地进行以下操作：</p>
+        
+        <h3>4.1 访问、复制与转移</h3>
+        <p>由于数据存储在您本地，您可以通过应用内的“文件管理器”或系统的“文件”应用，随时查看、复制或将您的文件转移到其他设备。</p>
+
+        <h3>4.2 删除信息</h3>
+        <p>您可以随时删除应用内的文档。对于应用产生的缓存或设置，您可以通过系统设置中的“应用管理 -> PureEditor -> 存储 -> 清除数据”来彻底删除。</p>
+
+        <h3>4.3 改变授权范围</h3>
+        <p>您可以通过设备的“设置”应用，找到本应用的权限设置，随时关闭“存储”、“传感器”等权限。请注意，关闭相关权限可能会导致部分功能（如打开文件、智感握姿）无法正常使用。</p>
+    </section>
+
+    <section id="section-5">
+        <h2>5. 未成年人保护</h2>
+        <p>我们非常重视对未成年人个人信息的保护。</p>
+        <ul>
+            <li><strong>适用性：</strong> PureEditor 是一款通用的文本处理工具，不包含任何不适宜未成年人的内容（如暴力、色情、赌博等）。</li>
+            <li><strong>监护人责任：</strong> 如果您是未滿 18 周岁的未成年人，建议您在父母或监护人的指导下阅读本政策并使用本应用。</li>
+            <li><strong>隐私保护：</strong> 由于我们不收集任何个人信息，也不具备账号注册功能，因此我们不会建立未成年人个人信息库，也不会对未成年人进行画像或推送广告。</li>
+            <li><strong>家长控制：</strong> 监护人可以通过设备系统的“健康使用手机”或“家长控制”功能，管理未成年人对本应用的使用时长。</li>
+        </ul>
+    </section>
+
+    <section id="section-6">
+        <h2>6. 系统基础服务说明</h2>
+        <p>为了保障应用的稳定运行和功能实现，我们使用了华为 HarmonyOS 提供的系统基础服务（Native SDK）。这些服务属于操作系统的一部分，不属于第三方数据收集SDK。</p>
+        <table class="permission-table">
+            <thead>
+                <tr>
+                    <th>服务名称</th>
+                    <th>提供方</th>
+                    <th>使用目的</th>
+                    <th>数据处理方式</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>HarmonyOS Motion Kit</td>
+                    <td>华为软件技术有限公司</td>
+                    <td>识别握持姿态（智感握姿）</td>
+                    <td>数据在本地处理，不上传</td>
+                </tr>
+                <tr>
+                    <td>ArkUI / ArkWeb</td>
+                    <td>华为软件技术有限公司</td>
+                    <td>构建界面与渲染网页预览</td>
+                    <td>本地渲染，不上传</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="section-7">
+        <h2>7. 本政策的更新</h2>
+        <p>随着法律法规的出台或业务功能的调整，我们可能会修订本隐私政策。由于本应用完全离线运行，更新后的隐私政策将随应用版本更新一同发布。当您更新应用版本后，我们会在首次启动时再次提示您阅读变更后的协议。</p>
+    </section>
+
+    <section id="section-8">
+        <h2>8. 如何联系我们</h2>
+        <p>如果您对本隐私政策或您的个人信息保护有任何疑问、意见或投诉，您可以通过以下方式与我们联系：</p>
+        <div class="contact-section">
+            <a href="mailto:UnbalancedCat@qq.com" class="email-link">UnbalancedCat@qq.com</a>
+            <p style="margin-top: 16px; text-align: center;">我们一般将在 15 个工作日内回复您的邮件。</p>
+        </div>
+    </section>
+
+    <div class="meta-info" style="text-align: center; margin-bottom: 0px;">
+            生效日期：2025年12月23日
+    </div>
+
+    <footer>
+        <p style="text-align: center;">Copyright &copy; 2025 PureEditor. All Rights Reserved.</p>
+        <p style="text-align: center;">by UnbalancedCat ❤️ PureEditor 2025</p>
+    </footer>
+
+</body>
+</html>
