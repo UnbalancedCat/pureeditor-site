@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>PureEditor 首页</title>
+    <link rel="stylesheet" href="./src/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="./src/css/style.css">
+</head>
+<body>
+
+<div class="container">
+    <header class="fade-in-down" style="margin-bottom: 40px;">
+        <div class="logo-container" style="width: 100px; height: 100px; font-size: 48px;">
+            <img src="./src/pic/PureEditor.png" alt="Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+            <i class="fa-solid fa-code logo-fallback"></i>
+        </div>
+        <h1 class="gradient-text" style="font-size: 32px; margin-bottom: 8px;">PureEditor</h1>
+        <div class="subtitle" style="font-size: 16px;">不仅是编辑，更是创造</div>
+        <div class="version-tag">v0.6.13</div>
+        <div class="subtitle" style="font-size: 16px; padding: 10px 0px 0px 0px; opacity: 0.8;">
+            全新 CodeMirror 内核驱动，带来桌面级的代码编辑体验。
+        </div>
+    </header>
+
+    <div class="section-title scroll-anim">全新特性</div>
+    <div class="slider-container scroll-anim">
+        <div class="slider-click-area"></div>
+
+        <div class="slide active">
+            <div class="slide-icon"><i class="fa-solid fa-layer-group" style="color: #007DFF;"></i></div>
+            <div class="slide-content">
+                <h3>专业内核</h3>
+                <p>基于 CodeMirror 6 构建<br>支持语法高亮、行号显示与代码折叠</p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="slide-icon"><i class="fa-brands fa-markdown" style="color: #FF2D55;"></i></div>
+            <div class="slide-content">
+                <h3>即时渲染预览</h3>
+                <p>Markdown、HTML、Mermaid 图表<br>在本地离线环境中完美呈现</p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="slide-icon"><i class="fa-solid fa-folder-tree" style="color: #FF9500;"></i></div>
+            <div class="slide-content">
+                <h3>文件系统管理</h3>
+                <p>支持多级目录、批量操作<br>像管理电脑文件一样管理你的灵感</p>
+            </div>
+        </div>
+
+        <div class="slider-dots">
+            <div class="dot active"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+
+    <div class="section-title scroll-anim">开始使用</div>
+    <div class="nav-grid scroll-anim">
+        <a href="features.html" class="nav-card">
+            <i class="fa-solid fa-wand-magic-sparkles nav-icon fa-bounce" style="color: #00ffb3;"></i>
+            <div class="nav-title">功能详情</div>
+            <div class="nav-desc">探索强大功能</div>
+        </a>
+
+        <a href="about.html" class="nav-card">
+            <i class="fa-solid fa-face-smile nav-icon" style="color: #ffdd00;"></i>
+            <div class="nav-title">关于应用</div>
+            <div class="nav-desc">设计理念</div>
+        </a>
+    </div>
+
+    <div class="section-title scroll-anim">界面预览</div>
+
+    <div class="slider-container scroll-anim screenshot-slider">
+        <div class="slider-click-area"></div>
+
+        <div class="slide active" style="padding: 0;">
+            <div class="screenshot-wrapper">
+                <img src="./src/pic/screenshot-editor.png" class="screenshot-img" alt="语法高亮">
+                <div class="floating-badge fade-in-up">
+                    <i class="fa-solid fa-code" style="color: #007DFF; font-size: 24px;"></i>
+                    <div class="badge-text">
+                        <div class="badge-title">语法高亮</div>
+                        <div class="badge-desc">支持 JS, TS, Python, C++ 等</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide" style="padding: 0;">
+            <div class="screenshot-wrapper">
+                <img src="./src/pic/screenshot-sidebar.png" class="screenshot-img" alt="快捷入口">
+                <div class="floating-badge">
+                    <i class="fa-solid fa-magnifying-glass" style="color: #FF2D55; font-size: 24px;"></i>
+                    <div class="badge-text">
+                        <div class="badge-title">快捷入口</div>
+                        <div class="badge-desc">快速高效地开始你的工作流</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide" style="padding: 0;">
+            <div class="screenshot-wrapper">
+                <img src="./src/pic/screenshot-settings.png" class="screenshot-img" alt="设置页面">
+                <div class="floating-badge">
+                    <i class="fa-solid fa-sliders" style="color: #FF9500; font-size: 24px;"></i>
+                    <div class="badge-text">
+                        <div class="badge-title">高度个性化</div>
+                        <div class="badge-desc">字体、字号、换行与只读模式</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slider-dots">
+            <div class="dot active"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+
+    <a href="index.html" style="text-decoration: none; color: inherit; display: block;">
+        <div class="card scroll-anim" style="margin-top: 32px;">
+            <div class="card-header">
+                <div class="card-icon">
+                    <i class="fa-solid fa-circle-user"></i>
+                </div>
+                <div class="card-title">PureEditor 隐私政策</div>
+                <i class="fa-solid fa-chevron-right" style="margin-left: auto; color: var(--text-secondary); font-size: 14px;"></i>
+            </div>
+
+            <div class="card-content">
+                <p style="color: var(--text-secondary); font-size: 14px; margin: 0;">
+                    点击此处跳转,查看 PureEditor 的隐私政策。
+                </p>
+            </div>
+        </div>
+    </a>
+
+    <div class="card scroll-anim" style="margin-top: 32px;">
+        <div class="card-header">
+            <div class="card-icon"><i class="fa-solid fa-server"></i></div>
+            <div class="card-title">环境自检</div>
+        </div>
+        <div class="card-content">
+            <p><i class="fa-solid fa-check" style="color: #34C759; margin-right: 8px;"></i> 编辑器内核：<strong style="color: #34C759;">CodeMirror 6</strong></p>
+            <p><i class="fa-solid fa-check" style="color: #34C759; margin-right: 8px;"></i> JS 交互桥接：<strong style="color: #34C759;">已连接</strong></p>
+        </div>
+    </div>
+
+    <footer>
+        <a>by UnbalancedCat</a>
+        <i class="fa-solid fa-heart" style="color: #ff0000; margin: 0 4px;"></i>
+        <a>PureEditor 2025</a>
+    </footer>
+
+    <div style="height: 40px;"></div>
+
+</div>
+
+<script src="./src/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,785 @@
+/* --- 变量定义 --- */
+:root {
+    --bg-color: #F2F3F5;
+    --card-bg: #FFFFFF;
+    --text-primary: #1F1F1F;
+    --text-secondary: #86909C;
+    --accent-color: #007DFF;
+    --success-color: #00B578;
+    --border-color: rgba(0, 0, 0, 0.05);
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+    --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #121212;
+        --card-bg: #1E1E1E;
+        --text-primary: #E5E6EB;
+        --text-secondary: #86909C;
+        --accent-color: #0A84FF;
+        --border-color: rgba(255, 255, 255, 0.08);
+        --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
+        --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.4);
+    }
+}
+
+/* --- 基础样式 --- */
+body {
+    font-family: -apple-system, HarmonyOS Sans, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* --- 头部动画 --- */
+header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.fade-in-down {
+    animation: fadeInDown 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.logo-container {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 16px;
+    border-radius: 20px;
+    background: var(--card-bg);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    /* 控制 fallback 图标大小 */
+    color: var(--accent-color);
+}
+
+.logo-fallback {
+    display: none;
+    /* 默认隐藏，JS 控制显示 */
+}
+
+.logo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* 渐变标题 */
+.gradient-text {
+    background: linear-gradient(120deg, var(--accent-color), #8A2BE2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 43px;
+    font-weight: 800;
+    margin: 0;
+}
+
+.version-tag {
+    display: inline-block;
+    background: rgba(0, 125, 255, 0.1);
+    color: var(--accent-color);
+    font-size: 12px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-top: 14px;
+    font-weight: 500;
+}
+
+/* --- 卡片样式 --- */
+.section-title {
+    font-size: 14px;
+    color: var(--text-secondary);
+    font-weight: 600;
+    margin: 24px 4px 12px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 16px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* 列表小图标 */
+.li-icon {
+    font-size: 10px;
+    color: var(--accent-color);
+    margin-right: 6px;
+    opacity: 0.7;
+}
+
+/* 按钮图标间距 */
+.action-btn i {
+    margin-right: 8px;
+}
+
+/* 链接箭头 */
+.link-btn .arrow {
+    margin-left: 6px;
+    font-size: 12px;
+    transition: transform 0.2s;
+}
+
+.link-btn:active .arrow {
+    transform: translateX(4px);
+}
+
+.card:active {
+    transform: scale(0.98);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.card-icon {
+    font-size: 18px;
+    /* 图标大小 */
+    margin-right: 12px;
+    width: 36px;
+    height: 36px;
+    background: rgba(128, 128, 128, 0.1);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-color);
+    /* 统一图标颜色 */
+}
+
+.card-title {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.card-content {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+/* 列表样式 */
+.feature-list {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.feature-list li {
+    margin-bottom: 6px;
+}
+
+/* --- 交互组件 --- */
+.action-btn {
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 16px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 按钮波纹效果 */
+.ripple:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    transform: scale(10, 10);
+    opacity: 0;
+    transition: transform .5s, opacity 1s;
+}
+
+.ripple:active:after {
+    transform: scale(0, 0);
+    opacity: 0.2;
+    transition: 0s;
+}
+
+/* 状态显示区 */
+.status-hidden {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.status-show {
+    height: auto;
+    opacity: 1;
+    margin-top: 12px;
+    padding: 12px;
+    background: rgba(0, 181, 120, 0.1);
+    border-radius: 8px;
+    color: var(--success-color);
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+}
+
+/* 图片容器 */
+.image-test-box {
+    margin-top: 12px;
+    border: 1px dashed var(--border-color);
+    border-radius: 12px;
+    padding: 12px;
+    text-align: center;
+}
+
+.image-test-box img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+}
+
+.img-caption {
+    font-size: 12px;
+    margin-top: 8px;
+    font-family: monospace;
+    color: var(--accent-color);
+    background: rgba(0, 125, 255, 0.05);
+    display: inline-block;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+/* 链接按钮 */
+.link-btn {
+    display: flex;
+    align-items: center;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 12px;
+    transition: opacity 0.2s;
+}
+
+.link-btn .arrow {
+    margin-left: 6px;
+    transition: transform 0.2s;
+}
+
+.link-btn:active {
+    opacity: 0.7;
+}
+
+.link-btn:active .arrow {
+    transform: translateX(4px);
+}
+
+/* --- 新增：导航网格系统 (Grid Layout) --- */
+.nav-grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr); /* 两列布局 */
+gap: 16px;
+margin-bottom: 32px;
+}
+
+.nav-card {
+background: var(--card-bg);
+border-radius: 20px;
+padding: 24px 16px;
+text-align: center;
+text-decoration: none; /* 去除下划线 */
+color: var(--text-primary);
+box-shadow: var(--shadow-sm);
+border: 1px solid var(--border-color);
+transition: all 0.2s ease;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+.nav-card:active {
+transform: scale(0.96);
+background-color: rgba(128, 128, 128, 0.05);
+}
+
+.nav-icon {
+font-size: 32px;
+margin-bottom: 12px;
+color: var(--accent-color);
+}
+
+.nav-title {
+font-size: 15px;
+font-weight: 600;
+}
+
+.nav-desc {
+font-size: 12px;
+color: var(--text-secondary);
+margin-top: 4px;
+}
+
+/* --- 新增：子页面头部 --- */
+.page-header {
+display: flex;
+align-items: center;
+margin-bottom: 24px;
+}
+
+.back-btn {
+text-decoration: none;
+color: var(--accent-color);
+font-size: 16px;
+font-weight: 600;
+display: flex;
+align-items: center;
+padding: 8px 16px 8px 0;
+}
+
+.page-title {
+font-size: 20px;
+font-weight: 700;
+margin-left: auto;
+margin-right: auto;
+transform: translateX(-16px); /* 视觉居中修正 */
+}
+
+/* --- 新增：功能列表样式 --- */
+.feature-item {
+display: flex;
+align-items: flex-start;
+padding: 16px 0;
+border-bottom: 1px solid var(--border-color);
+}
+.feature-item:last-child { border-bottom: none; }
+
+.feature-icon-box {
+width: 40px;
+height: 40px;
+border-radius: 12px;
+background: rgba(0, 125, 255, 0.1);
+color: var(--accent-color);
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 18px;
+margin-right: 16px;
+flex-shrink: 0;
+}
+
+.feature-text h3 { margin: 0 0 4px 0; font-size: 16px; }
+.feature-text p { margin: 0; font-size: 13px; color: var(--text-secondary); }
+
+/* 底部 */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 12px;
+    color: var(--text-secondary);
+    opacity: 0.6;
+}
+
+/* --- 入场动画 --- */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 交错动画逻辑：JS会控制添加 active 类，或者直接用 css delay */
+.stagger-anim {
+    opacity: 0;
+    animation: fadeInUp 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.stagger-anim:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.stagger-anim:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.stagger-anim:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.stagger-anim:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+/* --- 新增：优雅的图片容器与占位符 --- */
+.img-box {
+margin: 24px 0;
+border-radius: 16px;
+overflow: hidden;
+box-shadow: var(--shadow-md);
+background-color: var(--card-bg);
+border: 1px solid var(--border-color);
+position: relative;
+/* 默认高度，放入真实图片后可由图片撑开 */
+min-height: 500px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+/* 真实图片样式 */
+.img-box img {
+width: 100%;
+height: auto;
+display: block;
+object-fit: cover;
+}
+
+/* 占位提示文字 */
+.img-placeholder-text {
+position: absolute;
+color: var(--text-secondary);
+font-size: 14px;
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 8px;
+padding: 20px;
+text-align: center;
+border: 2px dashed var(--border-color);
+border-radius: 12px;
+width: 80%;
+height: 80%;
+justify-content: center;
+}
+
+/* --- 新增：滚动动画 (Scroll Reveal) --- */
+.scroll-anim {
+opacity: 0;
+transform: translateY(30px) scale(0.98);
+transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); /* Apple 常用贝塞尔曲线 */
+}
+
+.scroll-visible {
+opacity: 1;
+transform: translateY(0) scale(1);
+}
+
+/* --- 新增：PPT 幻灯片组件 (Carousel) --- */
+.slider-container {
+position: relative;
+overflow: hidden;
+border-radius: 20px;
+background: var(--card-bg);
+box-shadow: var(--shadow-md);
+margin: 24px 0;
+/* 1. [新增] 最小高度，防止在窄屏手机上内容溢出 */
+min-height: 260px;
+display: flex;
+align-items: center; /* 垂直居中 */
+}
+
+.slide {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+opacity: 0;
+transform: translateX(30px); /* 稍微增加位移感 */
+transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1); /* 更柔和的动效 */
+padding: 24px 32px 32px 30px; /* 增加内边距 */
+box-sizing: border-box;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+pointer-events: none;
+}
+
+/* [新增] 专门用于截图展示的 Slide 内容样式 */
+.slide-screenshot-placeholder {
+width: 100%;
+height: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+border: 2px dashed var(--border-color);
+border-radius: 12px;
+padding: 20px;
+background: rgba(128, 128, 128, 0.02);
+}
+
+.slide.active {
+opacity: 1;
+transform: translateX(0);
+pointer-events: all;
+z-index: 2;
+}
+
+.slide-icon {
+font-size: 48px;
+margin-bottom: 16px 16px 16px 0px;
+color: var(--accent-color);
+}
+
+.slide-content h3 { font-size: 18px; margin-bottom: 8px; }
+.slide-content p { font-size: 14px; color: var(--text-secondary); }
+
+/* 幻灯片指示器 */
+.slider-dots {
+position: absolute;
+bottom: 16px;
+left: 0;
+width: 100%;
+display: flex;
+justify-content: center;
+gap: 8px;
+z-index: 3;
+}
+
+.dot {
+width: 8px;
+height: 8px;
+border-radius: 50%;
+background: rgba(128, 128, 128, 0.3);
+transition: all 0.3s;
+}
+
+.dot.active {
+background: var(--accent-color);
+width: 24px;
+border-radius: 4px;
+}
+
+/* 点击切换的热区覆盖 */
+.slider-click-area {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: 10;
+cursor: pointer;
+}
+
+/* --- 截图轮播图专用样式 --- */
+
+/* 1. 容器高度控制：设置为视口高度的 65%，既能看清图，又不会太长 */
+.screenshot-slider {
+height: 65vh;
+min-height: 400px;
+max-height: 600px;
+background-color: var(--bg-color); /* 与背景融合，不显示卡片白底 */
+box-shadow: none; /* 去掉外层阴影，让图片自己发光 */
+border: none;
+}
+
+/* 2. 截图包装器 */
+.screenshot-wrapper {
+width: 100%;
+height: 100%;
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+overflow: hidden;
+}
+
+/* 3. 图片样式：核心 */
+.screenshot-img {
+height: 90%; /* 留出一点上下边距 */
+width: auto;
+max-width: 90%;
+object-fit: contain; /* 保持比例，完整显示 */
+border-radius: 16px; /* 模拟手机圆角 */
+
+/* 强烈的阴影，营造悬浮感 */
+box-shadow: 0 20px 40px -10px rgba(0,0,0,0.3);
+
+/* 稍微加一点边框，模拟手机边框 */
+border: 4px solid #333;
+/* [新增] 设置变换原点为顶部中心，确保放大时顶部不动 */
+transform-origin: top center;
+/* [新增] 添加一个平滑过渡，当滑块滑出时图片能平滑复位 */
+transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* =========================================
+   4. 悬浮文字卡片 (Floating Badge) - 终极修复版
+   请将此段代码放在 CSS 文件的最末尾
+   ========================================= */
+
+/* --- 1. 默认容器样式（对应浅色模式 Light Mode） --- */
+.floating-badge {
+position: absolute;
+bottom: 30px;
+left: 50%;
+transform: translateX(-50%);
+
+/* 关键：默认背景设为白色，文字设为深灰 */
+background: rgba(255, 255, 255, 0.85);
+color: #24292e;
+
+/* 边框和阴影 */
+border: 1px solid rgba(0, 0, 0, 0.1);
+box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+
+/* 布局与特效 */
+backdrop-filter: blur(12px);
+-webkit-backdrop-filter: blur(12px);
+padding: 12px 20px;
+border-radius: 30px;
+display: flex;
+align-items: center;
+gap: 12px;
+min-width: 200px;
+z-index: 10;
+transition: all 0.3s ease;
+}
+
+/* --- 2. 内部文字样式（使用 inherit 自动跟随） --- */
+.badge-text {
+text-align: left;
+display: flex;
+flex-direction: column;
+}
+
+.badge-title {
+/* 关键：不要写死颜色，使用 inherit 跟随父级 */
+color: inherit;
+font-size: 14px;
+font-weight: 600;
+line-height: 1.2;
+}
+
+.badge-desc {
+/* 关键：使用 inherit + opacity */
+color: inherit;
+opacity: 0.7;
+font-size: 11px;
+margin-top: 2px;
+}
+
+/* --- 3. 深色模式适配 (Dark Mode) --- */
+@media (prefers-color-scheme: dark) {
+.floating-badge {
+/* 深色模式下：背景变黑，文字变亮灰 */
+background: rgba(30, 30, 30, 0.85);
+color: #c9d1d9;
+
+border: 1px solid rgba(255, 255, 255, 0.1);
+box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+}
+
+/* 占位图背景 (没有真实截图时显示) */
+.placeholder-img-bg {
+width: 260px;
+height: 460px;
+background: var(--card-bg);
+border-radius: 16px;
+border: 2px dashed var(--border-color);
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+/* 简单的入场动画 */
+.fade-in-up {
+animation: fadeInUpBadge 0.6s ease forwards;
+}
+
+@keyframes fadeInUpBadge {
+from { opacity: 0; transform: translate(-50%, 20px); }
+to { opacity: 1; transform: translate(-50%, 0); }
+}
+
+/* 深色模式微调 */
+@media (prefers-color-scheme: dark) {
+.screenshot-img {
+border-color: #000; /* 深色模式下边框更黑 */
+box-shadow: 0 20px 40px -10px rgba(0,0,0,0.6);
+}
+}
+
+/* =========================================
+   新增：截图聚焦动画
+   ========================================= */
+
+/* 1. 定义动画关键帧 */
+@keyframes zoomInTop {
+/* 0% 到 25%：等待阶段，保持完整显示 */
+0%, 10% {
+transform: scale(1) translateY(0);
+}
+/* 100%：放大并上移阶段，聚焦顶部 */
+85% {
+/* 放大 1.8 倍，并向上移动 0px，根据实际效果微调 */
+transform: scale(1.4) translateY(0px);
+}
+}
+
+@keyframes zoomOut {
+/* 0% 到 25%：等待阶段，保持完整显示 */
+0% {
+transform: scale(1) translateY(0);
+}
+/* 100%：放大并上移阶段，聚焦顶部 */
+99% {
+/* 根据实际效果微调 */
+transform: scale(0.625) translateY(0px);
+}
+}
+
+/* 3. 激活状态下应用动画 */
+.slide.active .screenshot-img {
+/* 应用 zoomInTop 动画
+       时长: 6s (比轮播间隔稍长，确保动画能播放完)
+       缓动: 使用苹果风格的平滑曲线
+       模式: forwards (动画结束后停留在最终放大状态)
+    */
+animation: zoomInTop 5.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+/*animation: zoomOut 0.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;*/
+}
