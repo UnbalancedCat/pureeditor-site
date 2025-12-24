@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="包焕垲,unbalancedcat@qq.com">
+    <title>PureEditor 用户协议</title>
+    <link rel="shortcut icon" href="https://oss.unbalancedcat.cn/PureEditor-icon.png">
+    <link rel="stylesheet" href="./src/fontawesome/css/all.min.css">
+    <meta name="description" content="PureEditor 用户协议">
+    <style>
+        :root {
+            /* 华为风格配色 - 保持与隐私政策一致 */
+            --primary-color: #007DFF;
+            --text-primary: #191919;
+            --text-secondary: #666666;
+            --text-tertiary: #999999;
+            --bg-color: #ffffff;
+            --card-bg: #F2F3F5;
+            --divider-color: #E5E5E5;
+            --code-bg: #F0F0F0;
+            --toc-hover: #F2F2F2;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --primary-color: #0A59F7;
+                --text-primary: #E5E5E5;
+                --text-secondary: #AAAAAA;
+                --text-tertiary: #666666;
+                --bg-color: #000000;
+                --card-bg: #1C1C1E;
+                --divider-color: #333333;
+                --code-bg: #2C2C2E;
+                --toc-hover: #1A1A1A;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            font-family: "HarmonyOS Sans", "PingFang SC", "Microsoft YaHei", sans-serif;
+            line-height: 1.75;
+            color: var(--text-primary);
+            background-color: var(--bg-color);
+            padding: 24px 20px 60px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header {
+            margin-bottom: 32px;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+
+        .meta-info {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+        }
+
+        .summary-box {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 32px;
+        }
+
+        .summary-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .summary-title::before {
+            content: '';
+            display: inline-block;
+            width: 4px;
+            height: 16px;
+            background-color: var(--primary-color);
+            margin-right: 8px;
+            border-radius: 2px;
+        }
+
+        .summary-content {
+            font-size: 14px;
+            color: var(--text-secondary);
+            text-align: justify;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+            position: relative;
+        }
+
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-top: 24px;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+
+        p {
+            font-size: 15px;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-bottom: 16px;
+        }
+
+        li {
+            font-size: 15px;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+        
+        strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        /* 联系方式按钮 */
+        .contact-section {
+            text-align: center;
+            margin-top: 0px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--divider-color);
+        }
+
+        .email-link {
+            display: inline-block;
+            color: var(--primary-color);
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 12px 24px;
+            border-radius: 24px;
+            background-color: var(--card-bg);
+            margin-top: 10px;
+        }
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 12px;
+            color: var(--text-tertiary);
+            padding-top: 20px;
+        }
+
+        .icon-center {
+            text-align: center;
+            margin-bottom: 16px;
+        }
+        .user-icon {
+            font-size: 64px;
+            color: var(--primary-color);
+            transition: color 0.3s;
+        }
+        @media (prefers-color-scheme: dark) {
+            .user-icon {
+                color: #fff;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+
+        <div class="icon-center">
+            <i class="fa-solid fa-circle-user user-icon"></i>
+        </div>
+
+        <h1 style="text-align: center;">PureEditor 用户协议</h1>
+        <div class="meta-info" style="text-align: center;">
+            更新日期：2025年12月22日 &nbsp;|&nbsp; 生效日期：2025年12月23日
+        </div>
+        
+        <div class="summary-box">
+            <div class="summary-title">前言</div>
+            <div class="summary-content">
+                感谢您选择使用 PureEditor（以下简称“本软件”）。本协议是您与 PureEditor 开发者之间关于您使用本软件所订立的法律协议。<strong>请您务必审慎阅读、充分理解各条款内容，特别是免除或者限制责任的条款。当您开始使用本软件时，即表示您已阅读并同意接受本协议的约束。</strong>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <h2>1. 服务内容与许可范围</h2>
+        <p>1.1 <strong>软件功能</strong>：PureEditor 是一款运行于 HarmonyOS 平台的本地文本编辑工具，提供文本编辑、代码高亮、Markdown/HTML 预览及文件管理等功能。</p>
+        <p>1.2 <strong>授权许可</strong>：开发者授予您一项个人的、不可转让的、非独占的和非商业用途的合法使用许可。您可以为非商业目的在单一台终端设备上安装、使用、显示、运行本软件。</p>
+        <p>1.3 <strong>权利保留</strong>：本条及本协议其他条款未明示授权的其他一切权利仍由开发者保留，您在行使这些权利时须另外取得开发者的书面许可。</p>
+    </section>
+
+    <section>
+        <h2>2. 用户使用规范</h2>
+        <p>2.1 您承诺绝不将本软件用于任何非法目的，也不以任何非法方式使用本软件。</p>
+        <p>2.2 您不得利用本软件从事以下活动：</p>
+        <ul>
+            <li>制作、上传、复制、传送、传播包含任何反对宪法所确定的基本原则、危害国家安全、泄露国家秘密、颠覆国家政权、破坏国家统一、破坏民族团结、损害国家荣誉和利益的内容；</li>
+            <li>对本软件进行反向工程、反向汇编、反向编译，或者以其他方式尝试发现本软件的源代码；</li>
+            <li>编写恶意代码、病毒、木马或其他旨在破坏、干扰计算机系统或网络安全的程序。</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>3. 数据安全与隐私保护</h2>
+        <p>3.1 保护用户个人信息是开发者的一项基本原则。关于我们如何收集、使用、存储您的个人信息，请查阅我们的《隐私政策》。</p>
+        <p>3.2 <strong>本地存储声明</strong>：本软件为本地应用（Local-First），不提供云端同步服务。您创作的所有文档、代码及数据均存储于您的设备本地。<strong>您应当自行负责数据的备份。若因设备丢失、损坏、刷机或应用卸载导致数据丢失，开发者不承担恢复责任。</strong></p>
+    </section>
+
+    <section>
+        <h2>4. 知识产权声明</h2>
+        <p>4.1 本软件的一切著作权、商标权、专利权、商业秘密等知识产权，以及与本软件相关的所有信息内容（包括但不限于文字、图片、音频、视频、图表、界面设计、版面框架、有关数据或电子文档等）均受中华人民共和国法律法规和相应的国际条约保护，开发者享有上述知识产权。</p>
+        <p>4.2 未经开发者书面同意，您不得为任何商业或非商业目的自行或许可任何第三方实施、利用、转让上述知识产权。</p>
+    </section>
+
+    <section>
+        <h2>5. 免责声明（重要）</h2>
+        <p>5.1 <strong>“按原样”提供</strong>：本软件经过详细的测试，但不能保证与所有的软硬件系统完全兼容，不能保证本软件完全没有错误。如果出现不兼容及软件错误的情况，您可联系开发者获得技术支持。<strong>在法律允许的最大范围内，本软件是按“原样”提供的，不附带任何形式的明示或默示担保。</strong></p>
+        <p>5.2 <strong>数据安全免责</strong>：对于因不可抗力、病毒感染、黑客攻击、系统不稳定、第三方服务瑕疵、政府行为等原因造成的数据丢失、服务中断或其它缺陷，开发者不承担责任。</p>
+        <p>5.3 <strong>衍生损害免责</strong>：在任何情况下，开发者均不对因使用或无法使用本软件而引起的任何间接的、附带的、特殊的、后果性的损害（包括但不限于利润损失、业务中断、数据丢失或其他经济损失）承担赔偿责任，即使开发者已被告知该等损害发生的可能性。</p>
+    </section>
+
+    <section>
+        <h2>6. 协议的变更</h2>
+        <p>开发者有权在必要时修改本协议条款。协议条款一旦发生变动，将会在软件的新版本中提示修改内容。如果您不同意所改动的内容，您可以主动取消使用本软件。如果您继续使用本软件，则视为接受协议条款的变动。</p>
+    </section>
+
+    <section>
+        <h2>7. 法律适用与争议解决</h2>
+        <p>7.1 本协议的订立、执行和解释及争议的解决均应适用中华人民共和国法律。</p>
+        <p>7.2 如双方就本协议内容或其执行发生任何争议，双方应尽量友好协商解决；协商不成时，任何一方均可向开发者所在地的人民法院提起诉讼。</p>
+    </section>
+
+    <section style="border-bottom: 1px solid var(--divider-color);">
+        <h2>8. 联系方式</h2>
+        <p>如果您对本协议有任何疑问、意见或建议，请通过以下方式联系我们：</p>
+        <div class="contact-section">
+            <a href="mailto:UnbalancedCat@qq.com" class="email-link">UnbalancedCat@qq.com</a>
+            <p style="margin-top: 16px; text-align: center;">我们一般将在 15 个工作日内回复您的邮件。</p>
+        </div>
+    </section>
+
+    <div class="meta-info" style="text-align: center;  margin-bottom: 0px;">
+        生效日期：2025年12月23日
+    </div>
+
+    <footer>
+        <p style="text-align: center;">Copyright &copy; 2025 PureEditor. All Rights Reserved.</p>
+        <p style="text-align: center;">by UnbalancedCat ❤️ PureEditor 2025</p>
+    </footer>
+
+</body>
+</html>
