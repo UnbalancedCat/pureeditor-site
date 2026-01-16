@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://pureeditor.unbalancedcat.cn/sitemap.xml
