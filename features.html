@@ -25,126 +25,196 @@
             <div style="width: 48px;"></div>
         </div>
 
-        <div class="section-title scroll-anim">专业编辑体验</div>
-        <div class="card scroll-anim">
-            <div class="feature-item">
-                <div class="feature-icon-box" style="background: rgba(0, 125, 255, 0.1); color: #007DFF;">
-                    <i class="fa-solid fa-highlighter"></i>
-                </div>
-                <div class="feature-text">
-                    <h3>智能语法高亮</h3>
-                    <p>支持 Python, ArkTS, Java, C++, Go, Rust 等 30+ 种语言的实时着色</p>
-                </div>
-            </div>
-
-            <div class="feature-item">
-                <div class="feature-icon-box" style="background: rgba(88, 86, 214, 0.1); color: #5856D6;">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
-                <div class="feature-text">
-                    <h3>高查找与替换</h3>
-                    <p>支持区分大小写、全词匹配以及正则表达式搜索，批量替换更高效</p>
-                </div>
-            </div>
-
-            <div class="feature-item">
-                <div class="feature-icon-box" style="background: rgba(255, 149, 0, 0.1); color: #FF9500;">
-                    <i class="fa-solid fa-code"></i>
-                </div>
-                <div class="feature-text">
-                    <h3>代码辅助功能</h3>
-                    <p>包含行号显示、自动缩进、括号匹配与代码折叠，让逻辑更清晰</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="section-title scroll-anim">渲染引擎</div>
-        <div class="card scroll-anim">
-            <div class="card-content">
-                <div class="feature-item">
-                    <div class="feature-icon-box" style="background: rgba(90, 200, 250, 0.1); color: #5AC8FA;">
-                        <i class="fa-solid fa-globe"></i>
+        <div class="features-grid">
+            <div class="feature-column">
+                <div class="section-title scroll-anim">专业编辑体验</div>
+                <div class="card scroll-anim">
+                    <div class="feature-item">
+                        <div class="feature-icon-box" style="background: rgba(0, 125, 255, 0.1); color: #007DFF;">
+                            <i class="fa-solid fa-highlighter"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h3>智能语法高亮</h3>
+                            <p>支持 Python, ArkTS, Java, C++, Go, Rust 等 30+ 种语言的实时着色</p>
+                        </div>
                     </div>
-                    <div class="feature-text">
-                        <h3>HTML 离线运行</h3>
-                        <p>内置 Webview 容器，支持多页面跳转与 JS 交互，所见即所得</p>
+
+                    <div class="feature-item">
+                        <div class="feature-icon-box" style="background: rgba(88, 86, 214, 0.1); color: #5856D6;">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h3>高查找与替换</h3>
+                            <p>支持区分大小写、全词匹配以及正则表达式搜索，批量替换更高效</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-icon-box" style="background: rgba(255, 149, 0, 0.1); color: #FF9500;">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h3>代码辅助功能</h3>
+                            <p>包含行号显示、自动缩进、括号匹配与代码折叠，让逻辑更清晰</p>
+                        </div>
                     </div>
                 </div>
 
-                <div class="feature-item">
-                    <div class="feature-icon-box" style="background: rgba(255, 45, 85, 0.1); color: #FF2D55;">
-                        <i class="fa-brands fa-markdown"></i>
+                <div class="section-title scroll-anim">渲染引擎</div>
+                <div class="card scroll-anim">
+                    <div class="feature-item">
+                        <div class="feature-icon-box" style="background: rgba(90, 200, 250, 0.1); color: #5AC8FA;">
+                            <i class="fa-solid fa-globe"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h3>HTML 离线运行</h3>
+                            <p>内置 Webview 容器，支持多页面跳转与 JS 交互，所见即所得</p>
+                        </div>
                     </div>
-                    <div class="feature-text">
-                        <h3>Markdown 渲染</h3>
-                        <p>支持 KaTeX 数学公式、Mermaid 流程图以及 GFM 语法标准</p>
+
+                    <div class="feature-item">
+                        <div class="feature-icon-box" style="background: rgba(255, 45, 85, 0.1); color: #FF2D55;">
+                            <i class="fa-brands fa-markdown"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h3>Markdown 渲染</h3>
+                            <p>支持 KaTeX 数学公式、Mermaid 流程图以及 GFM 语法标准</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-title scroll-anim">本地运行环境</div>
+                <div class="card scroll-anim">
+                    <div class="feature-item">
+                        <div class="feature-icon-box" style="background: rgba(52, 199, 89, 0.1); color: #34C759;">
+                            <i class="fa-brands fa-python"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h3>Python 解释器</h3>
+                            <p>内置完整 Python 3.10 环境，支持标准库与多文件模块调用，无需联网即可运行</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-icon-box" style="background: rgba(0, 125, 255, 0.1); color: #007DFF;">
+                            <i class="fa-solid fa-c"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h3>C/C++ 编译器</h3>
+                            <p>基于 WASM 的 Clang 编译器，支持多文件编译链接与标准输入交互，性能强劲</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-icon-box" style="background: rgba(255, 149, 0, 0.1); color: #FF9500;">
+                            <i class="fa-solid fa-terminal"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h3>交互式控制台</h3>
+                            <p>不仅是输出日志，更支持标准输入 (stdin) 交互，完美还原桌面级开发体验</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="section-title scroll-anim">本地运行环境</div>
-        <div class="card scroll-anim">
-            <div class="feature-item">
-                <div class="feature-icon-box" style="background: rgba(52, 199, 89, 0.1); color: #34C759;">
-                    <i class="fa-brands fa-python"></i>
-                </div>
-                <div class="feature-text">
-                    <h3>Python 解释器</h3>
-                    <p>内置完整 Python 3.10 环境，支持标准库与多文件模块调用，无需联网即可运行</p>
-                </div>
-            </div>
+            <div class="feature-column">
+                <div class="section-title scroll-anim">文件管理</div>
+                <div class="card scroll-anim">
+                    <div class="feature-item">
+                        <div class="feature-icon-box" style="background: rgba(250, 176, 5, 0.1); color: #FAB005;">
+                            <i class="fa-solid fa-folder-tree"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h3>完整文件系统</h3>
+                            <p>支持创建文件夹、多级目录管理、重命名、复制与移动</p>
+                        </div>
+                    </div>
 
-            <div class="feature-item">
-                <div class="feature-icon-box" style="background: rgba(0, 125, 255, 0.1); color: #007DFF;">
-                    <i class="fa-solid fa-c"></i>
-                </div>
-                <div class="feature-text">
-                    <h3>C/C++ 编译器</h3>
-                    <p>基于 WASM 的 Clang 编译器，支持多文件编译链接与标准输入交互，性能强劲</p>
-                </div>
-            </div>
+                    <div class="feature-item">
+                        <div class="feature-icon-box" style="background: rgba(142, 142, 147, 0.1); color: #8E8E93;">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h3>沙箱隔离</h3>
+                            <p>数据完全存储于应用私有沙箱中，卸载即销毁，保护隐私</p>
+                        </div>
+                    </div>
 
-            <div class="feature-item">
-                <div class="feature-icon-box" style="background: rgba(255, 149, 0, 0.1); color: #FF9500;">
-                    <i class="fa-solid fa-terminal"></i>
+                    <div class="feature-item">
+                        <div class="feature-icon-box" style="background: rgba(52, 199, 89, 0.1); color: #34C759;">
+                            <i class="fa-solid fa-file-import"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h3>导入与导出</h3>
+                            <p>支持从系统文件选择器导入，或将项目打包为 ZIP 导出分享</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="feature-text">
-                    <h3>交互式控制台</h3>
-                    <p>不仅是输出日志，更支持标准输入 (stdin) 交互，完美还原桌面级开发体验</p>
-                </div>
-            </div>
-        </div>
 
-        <div class="section-title scroll-anim">文件管理</div>
-        <div class="card scroll-anim">
-            <div class="feature-item">
-                <div class="feature-icon-box" style="background: rgba(250, 176, 5, 0.1); color: #FAB005;">
-                    <i class="fa-solid fa-folder-tree"></i>
-                </div>
-                <div class="feature-text">
-                    <h3>完整文件系统</h3>
-                    <p>支持创建文件夹、多级目录管理、重命名、复制与移动</p>
-                </div>
-            </div>
+                <div class="section-title scroll-anim">创新交互</div>
+                <div class="card scroll-anim">
+                    <div class="feature-item">
+                        <div class="feature-icon-box" style="background: rgba(175, 82, 222, 0.1); color: #AF52DE;">
+                            <i class="fa-solid fa-hand-holding-hand"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h3>智感握姿</h3>
+                            <p>结合鸿蒙系统特性，智能感知左右手握持状态，自动调整侧边栏位置，单手操作更顺畅</p>
+                        </div>
+                    </div>
 
-            <div class="feature-item">
-                <div class="feature-icon-box" style="background: rgba(142, 142, 147, 0.1); color: #8E8E93;">
-                    <i class="fa-solid fa-shield-halved"></i>
-                </div>
-                <div class="feature-text">
-                    <h3>沙箱隔离</h3>
-                    <p>数据完全存储于应用私有沙箱中，卸载即销毁，保护隐私</p>
-                </div>
-            </div>
+                    <div class="feature-item">
+                        <div class="feature-icon-box" style="background: rgba(255, 59, 48, 0.1); color: #FF3B30;">
+                            <i class="fa-regular fa-keyboard"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h3>键盘辅助工具栏</h3>
+                            <p>专为移动端优化的快捷符号输入栏，支持自定义常用符号，大幅提升手机端编码效率</p>
+                        </div>
+                    </div>
 
-            <div class="feature-item">
-                <div class="feature-icon-box" style="background: rgba(52, 199, 89, 0.1); color: #34C759;">
-                    <i class="fa-solid fa-file-import"></i>
+                    <div class="feature-item">
+                        <div class="feature-icon-box" style="background: rgba(52, 199, 89, 0.1); color: #34C759;">
+                            <i class="fa-solid fa-compress"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h3>沉浸式体验</h3>
+                            <p>完美适配全面屏与折叠屏，支持双指缩放快速调整字体大小，提供桌面级的专注环境</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="feature-text">
-                    <h3>导入与导出</h3>
-                    <p>支持从系统文件选择器导入，或将项目打包为 ZIP 导出分享</p>
+
+                <div class="section-title scroll-anim">个性化与辅助</div>
+                <div class="card scroll-anim">
+                    <div class="feature-item">
+                        <div class="feature-icon-box" style="background: rgba(0, 199, 190, 0.1); color: #00C7BE;">
+                            <i class="fa-solid fa-map-location-dot"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h3>代码缩略图 (Minimap)</h3>
+                            <p>快速全局预览代码结构，在长达数千行的代码文件中也能轻松导航与定位</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-icon-box" style="background: rgba(88, 86, 214, 0.1); color: #5856D6;">
+                            <i class="fa-solid fa-moon"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h3>深色模式</h3>
+                            <p>完美适配系统深色模式，提供舒适的暗色主题，保护视力，夜间编码更专注</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-icon-box" style="background: rgba(255, 149, 0, 0.1); color: #FF9500;">
+                            <i class="fa-solid fa-sliders"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h3>丰富的设置项</h3>
+                            <p>支持自定义字体大小、文件编码格式、自动换行、行号显示等，打造专属编辑器</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

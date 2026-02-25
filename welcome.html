@@ -44,59 +44,113 @@
 <body>
 
     <div class="container">
-        <header class="fade-in-down" style="margin-bottom: 40px;">
-            <div class="logo-container" style="width: 100px; height: 100px; font-size: 48px;">
-                <img src="./src/pic/PureEditor.png" alt="Logo"
-                    onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
-                <i class="fa-solid fa-code logo-fallback"></i>
-            </div>
-            <h1 class="gradient-text" style="font-size: 32px; margin-bottom: 8px;">PureEditor</h1>
-            <div class="subtitle" style="font-size: 16px;">不仅是编辑，更是创造</div>
-            <div class="version-tag">v0.6.20 & v0.6.28 beta</div>
-            <div class="subtitle" style="font-size: 16px; padding: 10px 0px 0px 0px; opacity: 0.8;">
-                全新 CodeMirror 内核驱动，带来桌面级的代码编辑体验。
-            </div>
-        </header>
-
-        <a href="https://appgallery.huawei.com/app/detail?id=cn.txteditor.bhkapp&channelId=LAUNCHERSHARE"
-            style="text-decoration: none; color: inherit; display: block;">
-            <div class="card scroll-anim" style="margin-top: 32px;">
-                <div class="card-header" style="margin-bottom: 0px;">
-                    <div class="card-icon">
-                        <i class="fa-solid fa-store" style="color: #fe445c;"></i>
+        <div class="hero-section">
+            <div class="hero-content">
+                <header class="fade-in-down">
+                    <div class="logo-container">
+                        <img src="./src/pic/PureEditor.png" alt="Logo"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+                        <i class="fa-solid fa-code logo-fallback"></i>
                     </div>
-                    <div class="card-title">PureEditor 现已上架华为应用市场</div>
-                    <i class="fa-solid fa-chevron-right"
-                        style="margin-left: auto; color: var(--text-secondary); font-size: 14px;"></i>
-                </div>
-
-                <!-- <div class="card-content"> -->
-                <!-- <p style="color: var(--text-secondary); font-size: 14px; margin: 0;"> -->
-                <!--  -->
-                <!-- </p> -->
-                <!-- </div> -->
-            </div>
-        </a>
-
-        <a href="https://appgallery.huawei.com/link/invite-test-wap?taskId=2439a5590a129a8ce8fb1712712368c8&invitationCode=8mXnJPxZrBJ"
-            style="text-decoration: none; color: inherit; display: block;">
-            <div class="card scroll-anim" style="margin-top: 32px;">
-                <div class="card-header" style="margin-bottom: 0px;">
-                    <div class="card-icon">
-                        <i class="fa-solid fa-flask-vial" style="color: #4469fe;"></i>
+                    <h1 class="gradient-text">PureEditor</h1>
+                    <div class="subtitle">不仅是编辑，更是创造</div>
+                    <div class="version-tag">v0.6.21</div>
+                    <div class="subtitle" style="padding: 10px 0px 0px 0px; opacity: 0.8;">
+                        全新 CodeMirror6 内核驱动<br>带来桌面级的代码编辑体验
                     </div>
-                    <div class="card-title">加入 beta 小组，获取最新的测试版本！</div>
-                    <i class="fa-solid fa-chevron-right"
-                        style="margin-left: auto; color: var(--text-secondary); font-size: 14px;"></i>
-                </div>
+                </header>
 
-                <!-- <div class="card-content"> -->
-                <!-- <p style="color: var(--text-secondary); font-size: 14px; margin: 0;"> -->
-                <!--  -->
-                <!-- </p> -->
-                <!-- </div> -->
+                <div class="hero-actions">
+                    <a href="https://appgallery.huawei.com/app/detail?id=cn.txteditor.bhkapp&channelId=LAUNCHERSHARE"
+                        style="text-decoration: none; color: inherit; display: block;">
+                        <div class="card scroll-anim" style="margin-top: 32px;">
+                            <div class="card-header" style="margin-bottom: 0px;">
+                                <div class="card-icon">
+                                    <i class="fa-solid fa-store" style="color: #fe445c;"></i>
+                                </div>
+                                <div class="card-title">PureEditor 现已上架华为应用市场</div>
+                                <i class="fa-solid fa-chevron-right"
+                                    style="margin-left: auto; color: var(--text-secondary); font-size: 14px;"></i>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://appgallery.huawei.com/link/invite-test-wap?taskId=2439a5590a129a8ce8fb1712712368c8&invitationCode=8mXnJPxZrBJ"
+                        style="text-decoration: none; color: inherit; display: block;">
+                        <div class="card scroll-anim" style="margin-top: 16px;">
+                            <div class="card-header" style="margin-bottom: 0px;">
+                                <div class="card-icon">
+                                    <i class="fa-solid fa-flask-vial" style="color: #4469fe;"></i>
+                                </div>
+                                <div class="card-title">加入 beta 小组，获取最新的测试版本！</div>
+                                <i class="fa-solid fa-chevron-right"
+                                    style="margin-left: auto; color: var(--text-secondary); font-size: 14px;"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
             </div>
-        </a>
+
+            <div class="hero-visual">
+                <div class="slider-container scroll-anim screenshot-slider">
+                    <div class="slider-click-area"></div>
+
+                    <div class="slide active" style="padding: 0;">
+                        <div class="screenshot-wrapper">
+                            <picture>
+                                <source srcset="./src/pic/screenshot-editor-dark.png" media="(prefers-color-scheme: dark)">
+                                <img src="./src/pic/screenshot-editor.png" class="screenshot-img" alt="编辑器页面">
+                            </picture>
+                            <div class="floating-badge fade-in-up">
+                                <i class="fa-solid fa-code" style="color: #007DFF; font-size: 24px;"></i>
+                                <div class="badge-text">
+                                    <div class="badge-title">沉浸式代码编辑器</div>
+                                    <div class="badge-desc">支持多种编程语言的语法高亮</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide" style="padding: 0;">
+                        <div class="screenshot-wrapper">
+                            <picture>
+                                <source srcset="./src/pic/screenshot-sidebar-dark.png" media="(prefers-color-scheme: dark)">
+                                <img src="./src/pic/screenshot-sidebar.png" class="screenshot-img" alt="侧边栏">
+                            </picture>
+                            <div class="floating-badge">
+                                <i class="fa-solid fa-magnifying-glass" style="color: #FF2D55; font-size: 24px;"></i>
+                                <div class="badge-text">
+                                    <div class="badge-title">快捷入口</div>
+                                    <div class="badge-desc">快速高效地开始你的工作流</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide" style="padding: 0;">
+                        <div class="screenshot-wrapper">
+                            <picture>
+                                <source srcset="./src/pic/screenshot-settings-dark.png" media="(prefers-color-scheme: dark)">
+                                <img src="./src/pic/screenshot-settings.png" class="screenshot-img" alt="设置页面">
+                            </picture>
+                            <div class="floating-badge">
+                                <i class="fa-solid fa-sliders" style="color: #FF9500; font-size: 24px;"></i>
+                                <div class="badge-text">
+                                    <div class="badge-title">高度个性化</div>
+                                    <div class="badge-desc">丰富的设置项，打造专属编辑器</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slider-dots">
+                        <div class="dot active"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class="section-title scroll-anim">全新特性</div>
         <div class="slider-container scroll-anim">
@@ -157,124 +211,46 @@
             </a>
         </div>
 
-        <div class="section-title scroll-anim">界面预览</div>
-
-        <div class="slider-container scroll-anim screenshot-slider">
-            <div class="slider-click-area"></div>
-
-            <div class="slide active" style="padding: 0;">
-                <div class="screenshot-wrapper">
-                    <img src="./src/pic/screenshot-editor.png" class="screenshot-img" alt="语法高亮">
-                    <div class="floating-badge fade-in-up">
-                        <i class="fa-solid fa-code" style="color: #007DFF; font-size: 24px;"></i>
-                        <div class="badge-text">
-                            <div class="badge-title">语法高亮</div>
-                            <div class="badge-desc">支持 JS, TS, Python, C++ 等</div>
+        <div class="footer-cards-grid">
+            <a href="index.html" style="text-decoration: none; color: inherit; display: block;">
+                <div class="card scroll-anim" style="margin-top: 32px;">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fa-solid fa-circle-user"></i>
                         </div>
+                        <div class="card-title">隐私政策</div>
+                        <i class="fa-solid fa-chevron-right"
+                            style="margin-left: auto; color: var(--text-secondary); font-size: 14px;"></i>
                     </div>
                 </div>
-            </div>
+            </a>
 
-            <div class="slide" style="padding: 0;">
-                <div class="screenshot-wrapper">
-                    <img src="./src/pic/screenshot-sidebar.png" class="screenshot-img" alt="快捷入口">
-                    <div class="floating-badge">
-                        <i class="fa-solid fa-magnifying-glass" style="color: #FF2D55; font-size: 24px;"></i>
-                        <div class="badge-text">
-                            <div class="badge-title">快捷入口</div>
-                            <div class="badge-desc">快速高效地开始你的工作流</div>
+            <a href="terms.html" style="text-decoration: none; color: inherit; display: block;">
+                <div class="card scroll-anim" style="margin-top: 32px;">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fa-solid fa-circle-user"></i>
                         </div>
+                        <div class="card-title">用户协议</div>
+                        <i class="fa-solid fa-chevron-right"
+                            style="margin-left: auto; color: var(--text-secondary); font-size: 14px;"></i>
                     </div>
                 </div>
-            </div>
+            </a>
 
-            <div class="slide" style="padding: 0;">
-                <div class="screenshot-wrapper">
-                    <img src="./src/pic/screenshot-settings.png" class="screenshot-img" alt="设置页面">
-                    <div class="floating-badge">
-                        <i class="fa-solid fa-sliders" style="color: #FF9500; font-size: 24px;"></i>
-                        <div class="badge-text">
-                            <div class="badge-title">高度个性化</div>
-                            <div class="badge-desc">字体、字号、换行与只读模式</div>
+            <a href="https://qm.qq.com/q/Qb4BRIFAMQ" style="text-decoration: none; color: inherit; display: block;">
+                <div class="card scroll-anim" style="margin-top: 32px;">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fa-brands fa-qq" style="color: #1bb3dd;"></i>
                         </div>
+                        <div class="card-title">PureEditor Beta QQ 群</div>
+                        <i class="fa-solid fa-chevron-right"
+                            style="margin-left: auto; color: var(--text-secondary); font-size: 14px;"></i>
                     </div>
                 </div>
-            </div>
-
-            <div class="slider-dots">
-                <div class="dot active"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-            </div>
+            </a>
         </div>
-
-        <a href="index.html" style="text-decoration: none; color: inherit; display: block;">
-            <div class="card scroll-anim" style="margin-top: 32px;">
-                <div class="card-header">
-                    <div class="card-icon">
-                        <i class="fa-solid fa-circle-user"></i>
-                    </div>
-                    <div class="card-title">隐私政策</div>
-                    <i class="fa-solid fa-chevron-right"
-                        style="margin-left: auto; color: var(--text-secondary); font-size: 14px;"></i>
-                </div>
-
-                <div class="card-content">
-                    <p style="color: var(--text-secondary); font-size: 14px; margin: 0;">
-                        点击跳转，查看 PureEditor 的隐私政策。
-                    </p>
-                </div>
-            </div>
-        </a>
-
-        <a href="terms.html" style="text-decoration: none; color: inherit; display: block;">
-            <div class="card scroll-anim" style="margin-top: 32px;">
-                <div class="card-header">
-                    <div class="card-icon">
-                        <i class="fa-solid fa-circle-user"></i>
-                    </div>
-                    <div class="card-title">用户协议</div>
-                    <i class="fa-solid fa-chevron-right"
-                        style="margin-left: auto; color: var(--text-secondary); font-size: 14px;"></i>
-                </div>
-
-                <div class="card-content">
-                    <p style="color: var(--text-secondary); font-size: 14px; margin: 0;">
-                        点击跳转，查看 PureEditor 的用户协议。
-                    </p>
-                </div>
-            </div>
-        </a>
-
-        <!-- <div class="card scroll-anim" style="margin-top: 32px;">
-        <div class="card-header">
-            <div class="card-icon"><i class="fa-solid fa-server"></i></div>
-            <div class="card-title">环境自检</div>
-        </div>
-        <div class="card-content">
-            <p><i class="fa-solid fa-check" style="color: #34C759; margin-right: 8px;"></i> 编辑器内核：<strong style="color: #34C759;">CodeMirror 6</strong></p>
-            <p><i class="fa-solid fa-check" style="color: #34C759; margin-right: 8px;"></i> JS 交互桥接：<strong style="color: #34C759;">已连接</strong></p>
-        </div>
-    </div> -->
-
-        <a href="https://qm.qq.com/q/Qb4BRIFAMQ" style="text-decoration: none; color: inherit; display: block;">
-            <div class="card scroll-anim" style="margin-top: 32px;">
-                <div class="card-header" style="margin-bottom: 0px;">
-                    <div class="card-icon">
-                        <i class="fa-brands fa-qq" style="color: #1bb3dd;"></i>
-                    </div>
-                    <div class="card-title">加入 PureEditor Beta QQ 群吧！</div>
-                    <i class="fa-solid fa-chevron-right"
-                        style="margin-left: auto; color: var(--text-secondary); font-size: 14px;"></i>
-                </div>
-
-                <!-- <div class="card-content"> -->
-                <!-- <p style="color: var(--text-secondary); font-size: 14px; margin: 0;"> -->
-                <!--  -->
-                <!-- </p> -->
-                <!-- </div> -->
-            </div>
-        </a>
 
         <footer>
             <a>by UnbalancedCat</a>

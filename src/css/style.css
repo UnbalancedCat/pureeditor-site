@@ -40,6 +40,133 @@ body {
     margin: 0 auto;
 }
 
+/* --- 响应式布局 (平板/桌面端) --- */
+@media (min-width: 768px) {
+    body {
+        padding: 40px;
+    }
+
+    .container {
+        max-width: 800px;
+    }
+
+    .nav-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+    .card {
+        padding: 32px;
+    }
+
+    .feature-item {
+        padding: 24px 0;
+    }
+
+    .screenshot-slider {
+        height: 75vh;
+        max-height: 800px;
+    }
+
+    .screenshot-img {
+        width: 480px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1200px;
+    }
+
+    .nav-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+    }
+
+    .slider-container {
+        min-height: 400px;
+    }
+
+    .slide {
+        padding: 40px 60px;
+    }
+
+    .screenshot-img {
+        width: 540px;
+    }
+
+    /* PC端独立设计：Hero Section 左右布局 */
+    .hero-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 60px;
+        margin-bottom: 60px;
+        min-height: 80vh;
+    }
+
+    .hero-content {
+        flex: 1;
+        text-align: center;
+        max-width: 500px;
+    }
+
+    .hero-content header {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .hero-content .logo-container {
+        margin: 0 auto 0;
+    }
+
+    .hero-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .hero-actions .card {
+        margin-top: 0 !important;
+    }
+
+    .hero-visual {
+        flex: 1;
+        max-width: 600px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-visual .screenshot-slider {
+        height: 600px;
+        width: 100%;
+        margin: 0;
+        box-shadow: none;
+        background: transparent;
+    }
+
+    /* PC端独立设计：底部卡片网格布局 */
+    .footer-cards-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        margin-top: 40px;
+    }
+
+    .footer-cards-grid > a {
+        display: flex;
+        min-width: 0;
+    }
+
+    .footer-cards-grid .card {
+        margin-top: 0 !important;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 /* --- 头部动画 --- */
 header {
     text-align: center;
@@ -51,16 +178,16 @@ header {
 }
 
 .logo-container {
-    width: 180px;
-    height: 180px;
+    width: 100px;
+    height: 100px;
     margin: 0 auto 16px;
     border-radius: 20px;
-    background: var(--card-bg);
+    background: rgb(255, 255, 255);
     box-shadow: var(--shadow-sm);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 32px;
+    font-size: 48px;
     /* 控制 fallback 图标大小 */
     color: var(--accent-color);
 }
@@ -82,9 +209,33 @@ header {
     background: linear-gradient(120deg, var(--accent-color), #8A2BE2);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 43px;
+    font-size: 32px;
     font-weight: 800;
     margin: 0;
+}
+
+/* 响应式标题 (平板/桌面端) */
+@media (min-width: 768px) {
+    .gradient-text {
+        font-size: 48px;
+    }
+
+    .logo-container {
+        width: 160px;
+        height: 160px;
+        font-size: 64px;
+        margin-bottom: 24px;
+    }
+
+    .subtitle {
+        font-size: 20px !important;
+    }
+
+    .version-tag {
+        font-size: 14px;
+        padding: 4px 12px;
+        margin-top: 16px;
+    }
 }
 
 .version-tag {
@@ -116,6 +267,10 @@ header {
     box-shadow: var(--shadow-sm);
     border: 1px solid var(--border-color);
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /* 列表小图标 */
@@ -149,7 +304,7 @@ header {
 .card-header {
     display: flex;
     align-items: center;
-    margin-bottom: 12px;
+    width: 100%;
 }
 
 .card-icon {
@@ -175,6 +330,31 @@ header {
 .card-content {
     font-size: 14px;
     color: var(--text-secondary);
+    padding-top: 12px;
+    width: 100%
+}
+
+/* 响应式卡片 (平板/桌面端) */
+@media (min-width: 768px) {
+    .card-title {
+        font-size: 18px;
+    }
+
+    .card-content {
+        font-size: 16px;
+    }
+
+    .card-content,
+    .card-content p {
+        text-align: left;
+    }
+
+    .card-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 24px;
+        margin-right: 16px;
+    }
 }
 
 /* 列表样式 */
@@ -368,31 +548,151 @@ margin-right: auto;
 transform: translateX(-16px); /* 视觉居中修正 */
 }
 
+/* --- 新增：关于页面样式 --- */
+.about-logo {
+    width: 110px;
+    height: 110px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.about-title {
+    margin: 0;
+    font-size: 20px;
+}
+
+.about-subtitle {
+    color: var(--text-secondary);
+    margin: 8px 0 20px;
+}
+
+.about-desc {
+    background: rgba(128,128,128,0.05);
+    padding: 16px;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+@media (min-width: 768px) {
+    .about-logo {
+        width: 156px;
+        height: 156px;
+        border-radius: 28px;
+        margin-bottom: 28px;
+    }
+
+    .about-title {
+        font-size: 28px;
+    }
+
+    .about-subtitle {
+        font-size: 18px;
+        margin: 12px 0 28px;
+    }
+
+    .about-desc {
+        padding: 24px;
+        font-size: 16px;
+        width: 80%;
+    }
+}
+
+@media (min-width: 1024px) {
+    /* PC端独立设计：关于页面网格布局 */
+    .about-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 32px;
+        align-items: start;
+    }
+
+    .about-main-card {
+        margin-bottom: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .about-info-card {
+        margin-bottom: 0;
+    }
+}
+
 /* --- 新增：功能列表样式 --- */
 .feature-item {
-display: flex;
-align-items: flex-start;
-padding: 16px 0;
-border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: flex-start;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border-color);
 }
 .feature-item:last-child { border-bottom: none; }
 
 .feature-icon-box {
-width: 40px;
-height: 40px;
-border-radius: 12px;
-background: rgba(0, 125, 255, 0.1);
-color: var(--accent-color);
-display: flex;
-align-items: center;
-justify-content: center;
-font-size: 18px;
-margin-right: 16px;
-flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: rgba(0, 125, 255, 0.1);
+    color: var(--accent-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    margin-right: 16px;
+    flex-shrink: 0;
 }
 
 .feature-text h3 { margin: 0 0 4px 0; font-size: 16px; }
 .feature-text p { margin: 0; font-size: 13px; color: var(--text-secondary); }
+
+/* 响应式功能列表 (平板/桌面端) */
+@media (min-width: 768px) {
+    .feature-icon-box {
+        width: 56px;
+        height: 56px;
+        font-size: 24px;
+        margin-right: 24px;
+    }
+
+    .feature-text h3 {
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+
+    .feature-text p {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 1024px) {
+    /* PC端独立设计：功能卡片网格布局 */
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+    }
+
+    .features-grid .card {
+        margin-bottom: 32px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .features-grid .feature-item {
+        border-bottom: 1px solid var(--border-color);
+        padding: 24px 0;
+    }
+    
+    .features-grid .feature-item:last-child {
+        border-bottom: none;
+    }
+}
 
 /* 底部 */
 footer {
@@ -513,7 +813,7 @@ background: var(--card-bg);
 box-shadow: var(--shadow-md);
 margin: 24px 0;
 /* 1. [新增] 最小高度，防止在窄屏手机上内容溢出 */
-min-height: 260px;
+min-height: 300px;
 display: flex;
 align-items: center; /* 垂直居中 */
 }
@@ -566,6 +866,24 @@ color: var(--accent-color);
 
 .slide-content h3 { font-size: 18px; margin-bottom: 8px; }
 .slide-content p { font-size: 14px; color: var(--text-secondary); }
+
+/* 响应式幻灯片 (平板/桌面端) */
+@media (min-width: 768px) {
+    .slide-icon {
+        font-size: 64px;
+        margin-top: 16px;
+        margin-bottom: 8px;
+    }
+
+    .slide-content h3 {
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+
+    .slide-content p {
+        font-size: 16px;
+    }
+}
 
 /* 幻灯片指示器 */
 .slider-dots {
@@ -630,10 +948,10 @@ overflow: hidden;
 /* 3. 图片样式：核心 */
 .screenshot-img {
 height: 90%; /* 留出一点上下边距 */
-width: auto;
 max-width: 90%;
 object-fit: contain; /* 保持比例，完整显示 */
 border-radius: 16px; /* 模拟手机圆角 */
+width: 360px;
 
 /* 强烈的阴影，营造悬浮感 */
 box-shadow: 0 20px 40px -10px rgba(0,0,0,0.3);
@@ -677,6 +995,29 @@ gap: 12px;
 min-width: 200px;
 z-index: 10;
 transition: all 0.3s ease;
+}
+
+/* 响应式悬浮卡片 (平板/桌面端) */
+@media (min-width: 768px) {
+    .floating-badge {
+        bottom: 40px;
+        padding: 16px 28px;
+        border-radius: 40px;
+        gap: 16px;
+        min-width: 280px;
+    }
+
+    .floating-badge i {
+        font-size: 32px !important;
+    }
+
+    .badge-title {
+        font-size: 18px;
+    }
+
+    .badge-desc {
+        font-size: 14px;
+    }
 }
 
 /* --- 2. 内部文字样式（使用 inherit 自动跟随） --- */
@@ -752,12 +1093,12 @@ box-shadow: 0 20px 40px -10px rgba(0,0,0,0.6);
 @keyframes zoomInTop {
 /* 0% 到 25%：等待阶段，保持完整显示 */
 0%, 10% {
-transform: scale(1) translateY(0);
+transform: scale(1) translateY(20px);
 }
 /* 100%：放大并上移阶段，聚焦顶部 */
 85% {
-/* 放大 1.8 倍，并向上移动 0px，根据实际效果微调 */
-transform: scale(1.4) translateY(0px);
+/* 放大，并向上移动，根据实际效果微调 */
+transform: scale(1.6) translateY(-40px);
 }
 }
 
@@ -769,7 +1110,7 @@ transform: scale(1) translateY(0);
 /* 100%：放大并上移阶段，聚焦顶部 */
 99% {
 /* 根据实际效果微调 */
-transform: scale(0.625) translateY(0px);
+transform: scale(0.625) translateY(20px);
 }
 }
 
