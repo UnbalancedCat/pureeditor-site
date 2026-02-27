@@ -69,7 +69,7 @@ body {
     }
 
     .screenshot-img {
-        width: 480px;
+        width: 360px;
     }
 }
 
@@ -951,7 +951,7 @@ height: 90%; /* 留出一点上下边距 */
 max-width: 90%;
 object-fit: contain; /* 保持比例，完整显示 */
 border-radius: 16px; /* 模拟手机圆角 */
-width: 360px;
+width: 280px;
 
 /* 强烈的阴影，营造悬浮感 */
 box-shadow: 0 20px 40px -10px rgba(0,0,0,0.3);
