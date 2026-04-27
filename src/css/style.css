@@ -154,7 +154,7 @@ body {
         margin-top: 40px;
     }
 
-    .footer-cards-grid > a {
+    .footer-cards-grid>a {
         display: flex;
         min-width: 0;
     }
@@ -479,73 +479,76 @@ header {
 
 /* --- 新增：导航网格系统 (Grid Layout) --- */
 .nav-grid {
-display: grid;
-grid-template-columns: repeat(2, 1fr); /* 两列布局 */
-gap: 16px;
-margin-bottom: 32px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 两列布局 */
+    gap: 16px;
+    margin-bottom: 32px;
 }
 
 .nav-card {
-background: var(--card-bg);
-border-radius: 20px;
-padding: 24px 16px;
-text-align: center;
-text-decoration: none; /* 去除下划线 */
-color: var(--text-primary);
-box-shadow: var(--shadow-sm);
-border: 1px solid var(--border-color);
-transition: all 0.2s ease;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 24px 16px;
+    text-align: center;
+    text-decoration: none;
+    /* 去除下划线 */
+    color: var(--text-primary);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .nav-card:active {
-transform: scale(0.96);
-background-color: rgba(128, 128, 128, 0.05);
+    transform: scale(0.96);
+    background-color: rgba(128, 128, 128, 0.05);
 }
 
 .nav-icon {
-font-size: 32px;
-margin-bottom: 12px;
-color: var(--accent-color);
+    font-size: 32px;
+    margin-bottom: 12px;
+    color: var(--accent-color);
 }
 
 .nav-title {
-font-size: 15px;
-font-weight: 600;
+    font-size: 15px;
+    font-weight: 600;
 }
 
 .nav-desc {
-font-size: 12px;
-color: var(--text-secondary);
-margin-top: 4px;
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-top: 4px;
 }
 
 /* --- 新增：子页面头部 --- */
 .page-header {
-display: flex;
-align-items: center;
-margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
 }
 
 .back-btn {
-text-decoration: none;
-color: var(--accent-color);
-font-size: 16px;
-font-weight: 600;
-display: flex;
-align-items: center;
-padding: 8px 16px 8px 0;
+    text-decoration: none;
+    color: var(--accent-color);
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    padding: 8px 16px 8px 0;
 }
 
 .page-title {
-font-size: 20px;
-font-weight: 700;
-margin-left: auto;
-margin-right: auto;
-transform: translateX(-16px); /* 视觉居中修正 */
+    font-size: 20px;
+    font-weight: 700;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateX(-16px);
+    /* 视觉居中修正 */
 }
 
 /* --- 新增：关于页面样式 --- */
@@ -557,7 +560,7 @@ transform: translateX(-16px); /* 视觉居中修正 */
     margin-left: auto;
     margin-right: auto;
     background-color: #FFFFFF;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .about-title {
@@ -571,7 +574,7 @@ transform: translateX(-16px); /* 视觉居中修正 */
 }
 
 .about-desc {
-    background: rgba(128,128,128,0.05);
+    background: rgba(128, 128, 128, 0.05);
     padding: 16px;
     border-radius: 12px;
     text-align: center;
@@ -604,6 +607,7 @@ transform: translateX(-16px); /* 视觉居中修正 */
 }
 
 @media (min-width: 1024px) {
+
     /* PC端独立设计：关于页面网格布局 */
     .about-grid {
         display: grid;
@@ -631,7 +635,10 @@ transform: translateX(-16px); /* 视觉居中修正 */
     padding: 16px 0;
     border-bottom: 1px solid var(--border-color);
 }
-.feature-item:last-child { border-bottom: none; }
+
+.feature-item:last-child {
+    border-bottom: none;
+}
 
 .feature-icon-box {
     width: 40px;
@@ -647,8 +654,16 @@ transform: translateX(-16px); /* 视觉居中修正 */
     flex-shrink: 0;
 }
 
-.feature-text h3 { margin: 0 0 4px 0; font-size: 16px; }
-.feature-text p { margin: 0; font-size: 13px; color: var(--text-secondary); }
+.feature-text h3 {
+    margin: 0 0 4px 0;
+    font-size: 16px;
+}
+
+.feature-text p {
+    margin: 0;
+    font-size: 13px;
+    color: var(--text-secondary);
+}
 
 /* 响应式功能列表 (平板/桌面端) */
 @media (min-width: 768px) {
@@ -670,6 +685,7 @@ transform: translateX(-16px); /* 视觉居中修正 */
 }
 
 @media (min-width: 1024px) {
+
     /* PC端独立设计：功能卡片网格布局 */
     .features-grid {
         display: grid;
@@ -688,7 +704,7 @@ transform: translateX(-16px); /* 视觉居中修正 */
         border-bottom: 1px solid var(--border-color);
         padding: 24px 0;
     }
-    
+
     .features-grid .feature-item:last-child {
         border-bottom: none;
     }
@@ -752,120 +768,132 @@ footer {
 
 /* --- 新增：优雅的图片容器与占位符 --- */
 .img-box {
-margin: 24px 0;
-border-radius: 16px;
-overflow: hidden;
-box-shadow: var(--shadow-md);
-background-color: var(--card-bg);
-border: 1px solid var(--border-color);
-position: relative;
-/* 默认高度，放入真实图片后可由图片撑开 */
-min-height: 500px;
-display: flex;
-align-items: center;
-justify-content: center;
+    margin: 24px 0;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    position: relative;
+    /* 默认高度，放入真实图片后可由图片撑开 */
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* 真实图片样式 */
 .img-box img {
-width: 100%;
-height: auto;
-display: block;
-object-fit: cover;
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
 }
 
 /* 占位提示文字 */
 .img-placeholder-text {
-position: absolute;
-color: var(--text-secondary);
-font-size: 14px;
-display: flex;
-flex-direction: column;
-align-items: center;
-gap: 8px;
-padding: 20px;
-text-align: center;
-border: 2px dashed var(--border-color);
-border-radius: 12px;
-width: 80%;
-height: 80%;
-justify-content: center;
+    position: absolute;
+    color: var(--text-secondary);
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 20px;
+    text-align: center;
+    border: 2px dashed var(--border-color);
+    border-radius: 12px;
+    width: 80%;
+    height: 80%;
+    justify-content: center;
 }
 
 /* --- 新增：滚动动画 (Scroll Reveal) --- */
 .scroll-anim {
-opacity: 0;
-transform: translateY(30px) scale(0.98);
-transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); /* Apple 常用贝塞尔曲线 */
+    opacity: 0;
+    transform: translateY(30px) scale(0.98);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    /* Apple 常用贝塞尔曲线 */
 }
 
 .scroll-visible {
-opacity: 1;
-transform: translateY(0) scale(1);
+    opacity: 1;
+    transform: translateY(0) scale(1);
 }
 
 /* --- 新增：PPT 幻灯片组件 (Carousel) --- */
 .slider-container {
-position: relative;
-overflow: hidden;
-border-radius: 20px;
-background: var(--card-bg);
-box-shadow: var(--shadow-md);
-margin: 24px 0;
-/* 1. [新增] 最小高度，防止在窄屏手机上内容溢出 */
-min-height: 300px;
-display: flex;
-align-items: center; /* 垂直居中 */
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    background: var(--card-bg);
+    box-shadow: var(--shadow-md);
+    margin: 24px 0;
+    /* 1. [新增] 最小高度，防止在窄屏手机上内容溢出 */
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    /* 垂直居中 */
 }
 
 .slide {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-opacity: 0;
-transform: translateX(30px); /* 稍微增加位移感 */
-transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1); /* 更柔和的动效 */
-padding: 24px 32px 32px 30px; /* 增加内边距 */
-box-sizing: border-box;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-text-align: center;
-pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: translateX(30px);
+    /* 稍微增加位移感 */
+    transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    /* 更柔和的动效 */
+    padding: 24px 32px 32px 30px;
+    /* 增加内边距 */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    pointer-events: none;
 }
 
 /* [新增] 专门用于截图展示的 Slide 内容样式 */
 .slide-screenshot-placeholder {
-width: 100%;
-height: 100%;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-border: 2px dashed var(--border-color);
-border-radius: 12px;
-padding: 20px;
-background: rgba(128, 128, 128, 0.02);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed var(--border-color);
+    border-radius: 12px;
+    padding: 20px;
+    background: rgba(128, 128, 128, 0.02);
 }
 
 .slide.active {
-opacity: 1;
-transform: translateX(0);
-pointer-events: all;
-z-index: 2;
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: all;
+    z-index: 2;
 }
 
 .slide-icon {
-font-size: 48px;
-margin-bottom: 16px 16px 16px 0px;
-color: var(--accent-color);
+    font-size: 48px;
+    margin-bottom: 16px 16px 16px 0px;
+    color: var(--accent-color);
 }
 
-.slide-content h3 { font-size: 18px; margin-bottom: 8px; }
-.slide-content p { font-size: 14px; color: var(--text-secondary); }
+.slide-content h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.slide-content p {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
 
 /* 响应式幻灯片 (平板/桌面端) */
 @media (min-width: 768px) {
@@ -887,81 +915,86 @@ color: var(--accent-color);
 
 /* 幻灯片指示器 */
 .slider-dots {
-position: absolute;
-bottom: 16px;
-left: 0;
-width: 100%;
-display: flex;
-justify-content: center;
-gap: 8px;
-z-index: 3;
+    position: absolute;
+    bottom: 16px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    z-index: 3;
 }
 
 .dot {
-width: 8px;
-height: 8px;
-border-radius: 50%;
-background: rgba(128, 128, 128, 0.3);
-transition: all 0.3s;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(128, 128, 128, 0.3);
+    transition: all 0.3s;
 }
 
 .dot.active {
-background: var(--accent-color);
-width: 24px;
-border-radius: 4px;
+    background: var(--accent-color);
+    width: 24px;
+    border-radius: 4px;
 }
 
 /* 点击切换的热区覆盖 */
 .slider-click-area {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-z-index: 10;
-cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    cursor: pointer;
 }
 
 /* --- 截图轮播图专用样式 --- */
 
 /* 1. 容器高度控制：设置为视口高度的 65%，既能看清图，又不会太长 */
 .screenshot-slider {
-height: 65vh;
-min-height: 400px;
-max-height: 600px;
-background-color: var(--bg-color); /* 与背景融合，不显示卡片白底 */
-box-shadow: none; /* 去掉外层阴影，让图片自己发光 */
-border: none;
+    height: 65vh;
+    min-height: 400px;
+    max-height: 600px;
+    background-color: var(--bg-color);
+    /* 与背景融合，不显示卡片白底 */
+    box-shadow: none;
+    /* 去掉外层阴影，让图片自己发光 */
+    border: none;
 }
 
 /* 2. 截图包装器 */
 .screenshot-wrapper {
-width: 100%;
-height: 100%;
-position: relative;
-display: flex;
-justify-content: center;
-align-items: center;
-overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
 /* 3. 图片样式：核心 */
 .screenshot-img {
-height: 90%; /* 留出一点上下边距 */
-max-width: 90%;
-object-fit: contain; /* 保持比例，完整显示 */
-border-radius: 16px; /* 模拟手机圆角 */
-width: 280px;
+    height: 90%;
+    /* 留出一点上下边距 */
+    max-width: 90%;
+    object-fit: contain;
+    /* 保持比例，完整显示 */
+    border-radius: 16px;
+    /* 模拟手机圆角 */
+    width: 280px;
 
-/* 强烈的阴影，营造悬浮感 */
-box-shadow: 0 20px 40px -10px rgba(0,0,0,0.3);
+    /* 强烈的阴影，营造悬浮感 */
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.3);
 
-/* 稍微加一点边框，模拟手机边框 */
-border: 4px solid #333;
-/* [新增] 设置变换原点为顶部中心，确保放大时顶部不动 */
-transform-origin: top center;
-/* [新增] 添加一个平滑过渡，当滑块滑出时图片能平滑复位 */
-transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+    /* 稍微加一点边框，模拟手机边框 */
+    border: 4px solid #333;
+    /* [新增] 设置变换原点为顶部中心，确保放大时顶部不动 */
+    transform-origin: top center;
+    /* [新增] 添加一个平滑过渡，当滑块滑出时图片能平滑复位 */
+    transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 /* =========================================
@@ -971,30 +1004,30 @@ transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
 
 /* --- 1. 默认容器样式（对应浅色模式 Light Mode） --- */
 .floating-badge {
-position: absolute;
-bottom: 30px;
-left: 50%;
-transform: translateX(-50%);
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
 
-/* 关键：默认背景设为白色，文字设为深灰 */
-background: rgba(255, 255, 255, 0.85);
-color: #24292e;
+    /* 关键：默认背景设为白色，文字设为深灰 */
+    background: rgba(255, 255, 255, 0.85);
+    color: #24292e;
 
-/* 边框和阴影 */
-border: 1px solid rgba(0, 0, 0, 0.1);
-box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    /* 边框和阴影 */
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 
-/* 布局与特效 */
-backdrop-filter: blur(12px);
--webkit-backdrop-filter: blur(12px);
-padding: 12px 20px;
-border-radius: 30px;
-display: flex;
-align-items: center;
-gap: 12px;
-min-width: 200px;
-z-index: 10;
-transition: all 0.3s ease;
+    /* 布局与特效 */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 12px 20px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 200px;
+    z-index: 10;
+    transition: all 0.3s ease;
 }
 
 /* 响应式悬浮卡片 (平板/桌面端) */
@@ -1022,67 +1055,75 @@ transition: all 0.3s ease;
 
 /* --- 2. 内部文字样式（使用 inherit 自动跟随） --- */
 .badge-text {
-text-align: left;
-display: flex;
-flex-direction: column;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
 }
 
 .badge-title {
-/* 关键：不要写死颜色，使用 inherit 跟随父级 */
-color: inherit;
-font-size: 14px;
-font-weight: 600;
-line-height: 1.2;
+    /* 关键：不要写死颜色，使用 inherit 跟随父级 */
+    color: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.2;
 }
 
 .badge-desc {
-/* 关键：使用 inherit + opacity */
-color: inherit;
-opacity: 0.7;
-font-size: 11px;
-margin-top: 2px;
+    /* 关键：使用 inherit + opacity */
+    color: inherit;
+    opacity: 0.7;
+    font-size: 11px;
+    margin-top: 2px;
 }
 
 /* --- 3. 深色模式适配 (Dark Mode) --- */
 @media (prefers-color-scheme: dark) {
-.floating-badge {
-/* 深色模式下：背景变黑，文字变亮灰 */
-background: rgba(30, 30, 30, 0.85);
-color: #c9d1d9;
+    .floating-badge {
+        /* 深色模式下：背景变黑，文字变亮灰 */
+        background: rgba(30, 30, 30, 0.85);
+        color: #c9d1d9;
 
-border: 1px solid rgba(255, 255, 255, 0.1);
-box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-}
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
 }
 
 /* 占位图背景 (没有真实截图时显示) */
 .placeholder-img-bg {
-width: 260px;
-height: 460px;
-background: var(--card-bg);
-border-radius: 16px;
-border: 2px dashed var(--border-color);
-display: flex;
-align-items: center;
-justify-content: center;
+    width: 260px;
+    height: 460px;
+    background: var(--card-bg);
+    border-radius: 16px;
+    border: 2px dashed var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* 简单的入场动画 */
 .fade-in-up {
-animation: fadeInUpBadge 0.6s ease forwards;
+    animation: fadeInUpBadge 0.6s ease forwards;
 }
 
 @keyframes fadeInUpBadge {
-from { opacity: 0; transform: translate(-50%, 20px); }
-to { opacity: 1; transform: translate(-50%, 0); }
+    from {
+        opacity: 0;
+        transform: translate(-50%, 20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
 }
 
 /* 深色模式微调 */
 @media (prefers-color-scheme: dark) {
-.screenshot-img {
-border-color: #000; /* 深色模式下边框更黑 */
-box-shadow: 0 20px 40px -10px rgba(0,0,0,0.6);
-}
+    .screenshot-img {
+        border-color: #000;
+        /* 深色模式下边框更黑 */
+        box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.6);
+    }
 }
 
 /* =========================================
@@ -1091,36 +1132,41 @@ box-shadow: 0 20px 40px -10px rgba(0,0,0,0.6);
 
 /* 1. 定义动画关键帧 */
 @keyframes zoomInTop {
-/* 0% 到 25%：等待阶段，保持完整显示 */
-0%, 10% {
-transform: scale(1) translateY(20px);
-}
-/* 100%：放大并上移阶段，聚焦顶部 */
-85% {
-/* 放大，并向上移动，根据实际效果微调 */
-transform: scale(1.6) translateY(-40px);
-}
+
+    /* 0% 到 25%：等待阶段，保持完整显示 */
+    0%,
+    10% {
+        transform: scale(0.8) translateY(20px);
+    }
+
+    /* 100%：放大并上移阶段，聚焦顶部 */
+    85% {
+        /* 放大，并向上移动，根据实际效果微调 */
+        transform: scale(1.2) translateY(-40px);
+    }
 }
 
 @keyframes zoomOut {
-/* 0% 到 25%：等待阶段，保持完整显示 */
-0% {
-transform: scale(1) translateY(0);
-}
-/* 100%：放大并上移阶段，聚焦顶部 */
-99% {
-/* 根据实际效果微调 */
-transform: scale(0.625) translateY(20px);
-}
+
+    /* 0% 到 25%：等待阶段，保持完整显示 */
+    0% {
+        transform: scale(1) translateY(0);
+    }
+
+    /* 100%：放大并上移阶段，聚焦顶部 */
+    99% {
+        /* 根据实际效果微调 */
+        transform: scale(0.625) translateY(20px);
+    }
 }
 
 /* 3. 激活状态下应用动画 */
 .slide.active .screenshot-img {
-/* 应用 zoomInTop 动画
+    /* 应用 zoomInTop 动画
        时长: 6s (比轮播间隔稍长，确保动画能播放完)
        缓动: 使用苹果风格的平滑曲线
        模式: forwards (动画结束后停留在最终放大状态)
     */
-animation: zoomInTop 5.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
-/*animation: zoomOut 0.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;*/
+    animation: zoomInTop 5.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    /*animation: zoomOut 0.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;*/
 }
