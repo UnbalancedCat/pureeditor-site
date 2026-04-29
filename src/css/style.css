@@ -665,6 +665,10 @@ header {
     color: var(--text-secondary);
 }
 
+.features-grid .card {
+    align-items: flex-start;
+}
+
 /* 响应式功能列表 (平板/桌面端) */
 @media (min-width: 768px) {
     .feature-icon-box {
